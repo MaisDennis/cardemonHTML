@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <title id="browserTitle"></title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./styles.css">
+  <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
+  <link rel="icon" href="./logo.png" />
+</head>
+<body>
+<!-- Slider main container -->
+<div class="swiper-container">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <!-- ------------------------------------------------------------------- -->
+    <div class="swiper-slide">
+      <img src="01.jpg" alt="01" width="100%" height="auto">
+      <div class="ig-wrapper">
+        <a
+        class="ig-link"
+        href="https://wa.me/5513997609079"
+        >
+          <button class="wh-button">
+            <img class="ig-img" src="whatsappIcon.png" alt="wh01">
+            <p class="ig-p">Whatsapp 1</p>
+          </button>
+        </a>
+        <a
+        class="ig-link"
+        href="https://wa.me/5513996901240"
+        >
+          <button class="wh-button">
+            <img class="ig-img" src="whatsappIcon.png" alt="wh02">
+            <p class="ig-p">Whatsapp 2</p>
+          </button>
+        </a>
+        <a
+        class="ig-link"
+        href="https://wa.me/5513997842957"
+        >
+          <button class="wh-button">
+            <img class="ig-img" src="whatsappIcon.png" alt="wh03">
+            <p class="ig-p">Whatsapp 3</p>
+          </button>
+        </a>
+        <div class="footer-div">
+          <p class="cardemon-copyright-text">© cardemon</p>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------- -->
+    <div class="swiper-slide">
+      <img src="02.jpg" alt="02" width="100%" height="auto">
+    </div>
+    <div class="swiper-slide">
+      <img src="03.jpg" alt="03" width="100%" height="auto">
+    </div>
+    <div class="swiper-slide">
+      <img src="04.jpg" alt="03" width="100%" height="auto">
+    </div>
+    <!-- ------------------------------------------------------------------- -->
+    <div class="swiper-slide">
+      <div class="last-page-container">
+        <div class="ig-wrapper">
+          <label class="ig-label" id="igLabelId"></label>
+          <!-- <a
+          class="ig-link"
+          href="https://wa.me/5513997609079"
+          > -->
+            <button class="wh-button" onclick="window.location.href = 'https://wa.me/5513997609079';">
+              <img class="ig-img" src="whatsappIcon.png" alt="wh04">
+              <p class="ig-p">Whatsapp 1</p>
+            </button>
+          <!-- </a> -->
+          <a
+          class="ig-link"
+          href="https://wa.me/5513996901240"
+          >
+            <button class="wh-button">
+              <img class="ig-img" src="whatsappIcon.png" alt="wh05">
+              <p class="ig-p">Whatsapp 2</p>
+            </button>
+          </a>
+          <a
+          class="ig-link"
+          href="https://wa.me/5513997842957"
+          >
+            <button class="wh-button">
+              <img class="ig-img" src="whatsappIcon.png" alt="wh06">
+              <p class="ig-p">Whatsapp 3</p>
+            </button>
+          </a>
+        </div>
+        <a 
+          class="cardemon-link" 
+          href="https://www.instagram.com/cardemon.co/"
+        >
+          <button class="cardemon-button">
+            <p class="cardemon-p">by cardemon</p>
+          </button>
+        </a>   
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------- -->
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <!-- <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div> -->
+
+  <!-- If we need scrollbar -->
+  <!-- <div class="swiper-scrollbar"></div> -->
+</div>
+
+<!-- <script src="https://unpkg.com/swiper/swiper-bundle.js"></script> -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  // ---------------------------------------------------------------------------
+  var title = document.getElementById('igLabelId');
+  var browserTitle = document.getElementById('browserTitle');
+  title.innerHTML += 'Barraca da Sônia';
+  browserTitle.innerHTML += title.innerHTML
+  // ---------------------------------------------------------------------------
+  const swiper = new Swiper('.swiper-container', {
+  // Optional parameters
+  // direction: 'vertical',
+  // loop: true,
+  effect: 'cube',
+      grabCursor: true,
+      cubeEffect: {
+        // shadow: true,
+        // slideShadows: true,
+        // shadowOffset: 20,
+        // shadowScale: 0.94,
+      },
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  // navigation: {
+  //   nextEl: '.swiper-button-next',
+  //   prevEl: '.swiper-button-prev',
+  // },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+</script>
+</body>
+</html>
